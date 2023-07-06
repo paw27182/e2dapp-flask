@@ -1,0 +1,20 @@
+<script src="appmain/static/js/appmain.js"></script>
+
+{% if alert == "NG" %}
+    {% set alertType = "alert-danger" %}
+{% else %}
+    {% set alertType = "alert-primary" %}
+{% endif %}
+
+<div class="alert {{ alertType }} alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- download link -->
+<div>
+    {% if alert == "OK" %}
+<!--        <a href="{{url_for('appmain_bp.static', filename='wdir/' + user + '/' + filename)}}" download="payload.zip">Click me to download {{filename }}</a>-->
+        <a href='/downloads/appmain/static/wdir/{{ user }}/{{ filename }}' download='{{ filename }}'>Click me to download {{filename }}</a>
+    {% endif %}
+</div>

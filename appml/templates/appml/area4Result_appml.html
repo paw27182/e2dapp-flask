@@ -1,0 +1,79 @@
+{% if alert == "NG" %}
+    {% set alertType = "alert-danger" %}
+{% else %}
+    {% set alertType = "alert-primary" %}
+{% endif %}
+
+<div class="alert {{ alertType }} alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div>
+    <p>total computation time:  {{ tc_time }}</p>
+</div>
+
+{% for image in images %}
+    {% set imgSize = 256 %}
+
+    {% set image2 = image[11:] %}
+    {% set image2 = image2 | replace('.png','') %}
+
+    <a href= "#{{ image2 }}" data-bs-toggle="modal">
+        <img src="{{url_for('appml_bp.static', filename='wdir/' + user + '/output/' + image)}}" width={{ imgSize }} height={{ imgSize }} class="img-fluid rounded mb-1">
+    </a>
+
+    <!-- Modal Dialog -->
+    <div class="modal fade" id="{{ image2 }}" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="modal-title">"{{ image2 }}"</h6>
+                    <img src="{{url_for('appml_bp.static', filename='wdir/' + user + '/output/' + image)}}" class="img-fluid mt-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% for url in urls %}
+    {% set imgSize = 256 %}
+
+    {% set url2 = url[11:] %}
+    {% set url2 = url2 | replace('.html','') %}
+
+    <a class="btn btn-lg btn-success font-weight-bold img-fluid rounded" href="{{url_for('appml_bp.static', filename='wdir/' + user + '/output/' + url)}}" target="_blank" rel="noopener noreferrer" role="button">{{ url2[4:]}}</a>
+{% endfor %}
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                {% for col in results[0] %}
+                    <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+
+        {% for item in results[1:]%}
+            <tbody>
+                 <tr>
+                    {% for col in item %}
+                        <td> {{ col }} </td>
+                    {% endfor %}
+                 </tr>
+            </tbody>
+       {% endfor %}
+
+    </table>
+</div>
+
+<!-- download link -->
+<div>
+<!--    <a href="{{url_for('appml_bp.static', filename='wdir/' + user + '/' + filename)}}" download="payload.zip">Click me to download {{filename }}</a>-->
+    <a href='/downloads/appml/static/wdir/{{ user }}/{{ filename }}' download='{{ filename }}'>Click me to download {{filename }}</a>
+</div>
