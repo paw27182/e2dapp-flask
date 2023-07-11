@@ -12,7 +12,6 @@
 * Environment setting
   * Edit settings.py
     * PYTHON_EXE_FILE
-    * BASE_DIR
 
 <br>
 
@@ -23,7 +22,7 @@
 <br>
 
 * Open browser
-  * http://localhost:5002/login
+  * http://localhost:8000/login
   * Login Email address/Password: sakura.suwa@example.com/helloe2d
 
 <br>
