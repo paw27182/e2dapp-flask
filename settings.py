@@ -31,3 +31,10 @@ DATABASE_TYPE = "SQLite3"
 # PORT = 8000
 # DB_ADMINISTRATOR = ["kate.walsh@example.com", "mack.davis@example.com"]
 # DATABASE_TYPE = "SQLite3"
+
+
+# # In case of Azure(Linux)
+# HOST = None
+# PORT = None
+# DB_ADMINISTRATOR = ["kate.walsh@example.com", "mack.davis@example.com"]
+# DATABASE_TYPE = "SQLite3"
