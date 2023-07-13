@@ -41,6 +41,7 @@
 
         <div class="col-10">
             <form class="form-signin" role="form" method="POST">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                 <h2 class="form-signin-heading">Please Login</h2>
 
                 <div class="form-group form-row w-auto my-1">

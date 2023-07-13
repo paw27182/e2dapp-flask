@@ -18,14 +18,20 @@ import logging.handlers
 from pathlib import Path
 
 from flask import Flask
+from flask_wtf.csrf import CSRFProtect
 from waitress import serve
 
 import appmain.command as cmd
 from models.models import db
 
+csrf = CSRFProtect()
+
 
 def create_app():
     app = Flask(__name__)
+
+    csrf.init_app(app)
+    app.config['csrf'] = csrf
 
     # set context
     with app.app_context():

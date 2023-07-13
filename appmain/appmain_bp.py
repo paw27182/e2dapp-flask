@@ -4,8 +4,7 @@ import zipfile
 from datetime import datetime as dt
 from pathlib import Path
 
-from flask import (Blueprint, current_app, render_template, request,
-                   send_from_directory)
+from flask import Blueprint, current_app, render_template, request, send_from_directory
 from flask_login import current_user
 
 import appmain.command as cmd
@@ -14,6 +13,8 @@ from models.models import FormInfo, FormList, GroupInfo
 
 mid = Path(__file__).name
 ftime = "%Y/%m/%d %H:%M:%S"
+
+csrf = current_app.config.get('csrf')
 
 appmain_bp = Blueprint('appmain_bp', __name__,
                        template_folder='templates/appmain',
@@ -37,6 +38,7 @@ def prepare_working_dir(user):
 
 
 @appmain_bp.route("/appmain", methods=["POST"])
+@csrf.exempt
 def appmain():
     logger = current_app.logger
 

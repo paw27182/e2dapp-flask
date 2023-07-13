@@ -9,6 +9,8 @@ import appml.command as cmd
 mid = Path(__file__).name
 ftime = "%Y/%m/%d %H:%M:%S"
 
+csrf = current_app.config.get('csrf')
+
 appml_bp = Blueprint('appml_bp', __name__,
                      template_folder='templates/appml',
                      static_url_path='/appml/static',
@@ -17,6 +19,7 @@ appml_bp = Blueprint('appml_bp', __name__,
 
 
 @appml_bp.route('/appml', methods=['POST'])
+@csrf.exempt
 def appml():
     logger = current_app.logger
 
