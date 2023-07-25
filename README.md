@@ -3,7 +3,7 @@
 # 1. What you can do
 
 * To accumulate excel forms to the database.<br>
-* To learn the flask application, which uses blue print.
+* To learn the flask application, which uses blueprint.
 
 <br>
 
