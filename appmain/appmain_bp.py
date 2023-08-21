@@ -215,7 +215,7 @@ def appmain():
         items = list()
         for i, obj in enumerate(FormList.query.filter_by().all()):
             items.append([i + 1, obj.formname, obj.form_size,
-                         obj.groupname, obj.update_at, obj.modified_by])
+                         obj.groupname, obj.update_at.strftime(ftime), obj.modified_by])
         items = [item for item in items if item[1] ==
                  selected_form and item[3] == groupname]
 
