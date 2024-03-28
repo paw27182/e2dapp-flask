@@ -7,7 +7,8 @@ from flask import current_app
 BASE_DIR = current_app.config.get("BASE_DIR")  # ./e2d-flask
 
 # flask
-SECRET_KEY = b'the human story...'
+# SECRET_KEY = b'the human story...'
+SECRET_KEY = os.urandom(10)
 
 # database
 database_type = current_app.config["DATABASE_TYPE"]

@@ -1,0 +1,8 @@
+ 2024-02-22 10:25:13,485 - app - INFO - Logging Starts.
+ 2024-02-22 10:25:41,558 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2024-02-22 10:25:47,907 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2024-02-22 10:25:52,006 - app - INFO - +++++ logout +++ sakura.suwa@example.com
+ 2024-02-22 10:27:50,890 - app - INFO - Logging Starts.
+ 2024-02-22 10:38:59,225 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2024-02-22 10:39:02,662 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2024-02-22 10:39:05,396 - app - INFO - +++++ logout +++ sakura.suwa@example.com
