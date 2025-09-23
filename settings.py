@@ -17,7 +17,7 @@ ENVIRONMENT = "development"
 BASE_DIR = Path(__file__).resolve().parent
 
 # In case of Windows 10
-PYTHON_EXE_FILE = r"C:/Python/enve2d/Scripts/python.exe"  # specify python executable file
+PYTHON_EXE_FILE = r"C:/Python/env/Scripts/python.exe"  # specify python executable file
 HOST = "127.0.0.1"  # localhost
 PORT = 8000
 DB_ADMINISTRATOR = ["kate.walsh@example.com", "mack.davis@example.com"]

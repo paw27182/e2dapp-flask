@@ -35,7 +35,7 @@ def validity_check_control_data_dict(control_data_dict):
     allowed_words += ["varchar", "timestamp"]  # PostgreSQL ex.) varchar(100) -> varchar
 
     # if False in [True if item in allowed_words else False for item in key_type]:
-    if False in [True if re.sub('\([0-9]*\)', '', item) in allowed_words else False for item in key_type]:
+    if False in [True if re.sub(r'\([0-9]*\)', '', item) in allowed_words else False for item in key_type]:
         alert = ('NG', 'error: valid key_type: text, integer, real, varchar, timestamp')
         return alert
 
@@ -67,7 +67,7 @@ def gen_control_data_dict(data, file_name):
     key_type = []
     pk_mark = []
 
-    ptn1 = re.compile('\(.+?\)')  # 括弧内抽出
+    ptn1 = re.compile(r'\(.+?\)')  # 括弧内抽出
     ptn2 = re.compile('[ /.%　]')  # slash period percent 全角スペース
 
     for row in control_sheet.iter_rows(min_row=2):
