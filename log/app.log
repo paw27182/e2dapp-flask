@@ -1,0 +1,5 @@
+ 2025-09-23 21:43:26,064 - app - INFO - Logging Starts.
+ 2025-09-23 21:43:52,694 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2025-09-23 21:43:57,816 - app - INFO - [appmain_bp.py] --- @appmain_bp.route("/appmain") user= 'sakura.suwa@example.com' -----
+ 2025-09-23 21:44:00,775 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2025-09-23 21:44:04,604 - app - INFO - +++++ logout +++ sakura.suwa@example.com
