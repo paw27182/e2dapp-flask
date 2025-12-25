@@ -36,7 +36,7 @@
 # 3. System
 * OS: Windows 10/11, Ubuntu 20.04.6 LTS, Azure Web App(Linux)
 * Web Framework: Flask
-* Python 3.13.7
+* Python 3.13.11
 * Python Libraries: See requirements.txt
 * Bootstrap 5.2.3
 * jQuery 3.7.1

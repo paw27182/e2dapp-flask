@@ -16,14 +16,14 @@ ENVIRONMENT = "development"
 
 BASE_DIR = Path(__file__).resolve().parent
 
-# # In case of Windows 10
-# PYTHON_EXE_FILE = r"C:/Python/env/Scripts/python.exe"  # specify python executable file
-# HOST = "127.0.0.1"  # localhost
-# PORT = 8000
-# DB_ADMINISTRATOR = ["kate.walsh@example.com", "mack.davis@example.com"]
-# DATABASE_TYPE = "SQLite3"
-# # DATABASE_TYPE = "PostgreSQL"  # UNDISCLOSED
-# # DATABASE_TYPE = "MongoDB"  # UNDISCLOSED
+# In case of Windows 10
+PYTHON_EXE_FILE = r"C:/Python/env/Scripts/python.exe"  # specify python executable file
+HOST = "127.0.0.1"  # localhost
+PORT = 8000
+DB_ADMINISTRATOR = ["kate.walsh@example.com", "mack.davis@example.com"]
+DATABASE_TYPE = "SQLite3"
+# DATABASE_TYPE = "PostgreSQL"  # UNDISCLOSED
+# DATABASE_TYPE = "MongoDB"  # UNDISCLOSED
 
 # # In case of Ubuntu 20.04.6 LT
 # PYTHON_EXE_FILE = "/home/paw/enve2d-flask/bin/python3.10"  # specify python executable file
@@ -33,8 +33,8 @@ BASE_DIR = Path(__file__).resolve().parent
 # DATABASE_TYPE = "SQLite3"
 
 
-# In case of Azure(Linux)
-HOST = None
-PORT = None
-DB_ADMINISTRATOR = ["kate.walsh@example.com", "mack.davis@example.com"]
-DATABASE_TYPE = "SQLite3"
+# # In case of Azure(Linux)
+# HOST = None
+# PORT = None
+# DB_ADMINISTRATOR = ["kate.walsh@example.com", "mack.davis@example.com"]
+# DATABASE_TYPE = "SQLite3"
